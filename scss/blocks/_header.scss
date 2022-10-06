@@ -1,0 +1,170 @@
+.header {
+
+  .header__wrp {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    @include mobile {
+      padding-top: 45px;
+    }
+  }
+  .header__logo-title {
+    font-family: 'Magra', sans-serif;
+    @include font (32px, 39px, normal, 600);
+    color: $white-color;
+
+    @include mobile {
+      display: none;
+    }
+
+  }
+  .header__nav-list {
+    display: flex;
+    gap: 42px;
+
+    @include tablet {
+      gap: 20px;
+      text-align: center;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .header__nav-link {
+    text-decoration: none;
+    font-family: 'Red Hat Text';
+    @include font (16px, 21px, normal, 500);
+    color: $white-color;
+  }
+
+  .header__nav-menu {
+    display: none;
+    @include mobile {
+      display: block;
+      padding-top: 45px;
+    }
+  }
+
+  .header__nav-svg {
+    fill: $white-color;
+    transition: 0.3s all;
+  }
+
+  .header__nav-svg:hover,
+  .header__nav-svg:focus{
+    cursor: pointer;
+    fill: $orange-color;
+  }
+
+  .header__nav-svg:active {
+    opacity: 0.7;
+  }
+
+
+  .header__btn-wrp {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .header__btn-login {
+    @include font (16px, 21px, normal, 500);
+    padding: 10px 30px;
+    position: relative;
+  }
+
+  //popup
+  .header__popup {
+    display: none;
+
+    @include mobile {
+      position: fixed;
+      display: flex;
+      width: 165px;
+      top: 0;
+      //right: -165px;
+      right: -100%;
+      height: 250px;
+      background: #F2785C;
+      box-shadow: 0 4px 3px rgb(13 96 111 / 25%);
+      border-radius: 10px;
+      padding: 15px;
+      box-sizing: border-box;
+      flex-direction: column;
+      transition: 0.3s all;
+      //transform: translateX(5000px);
+    }
+  }
+
+  .header__popup-open {
+    @include mobile {
+      right: 0;
+      //transform: translateX(-100%);
+    }
+  }
+
+  .header__popup-close {
+    fill: $white-color;
+    width: 16px;
+    height: 16px;
+    transition: 0.3s all;
+  }
+
+  .header__popup-close:hover,
+  .header__popup-close:focus {
+    cursor: pointer;
+    fill: $green-color;
+  }
+
+  .header__popup-close:active {
+    opacity: 0.7;
+  }
+
+  .header__popup-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .header__popup-item {
+    margin-bottom: 10px;
+  }
+
+  .header__popup-link {
+    font-family: 'Red Hat Text';
+    @include font (16px, 21px, normal, 500);
+    color: $white-color;
+    text-decoration: none;
+    transition: 0.3s color linear;
+  }
+
+  .header__nav-link:hover,
+  .header__nav-link:focus,
+  .header__popup-link:hover,
+  .header__popup-link:focus {
+    cursor: pointer;
+    color: $green-color;
+  }
+
+  .header__nav-link:active,
+  .header__popup-link:active {
+    opacity: 0.5;
+  }
+
+
+
+}

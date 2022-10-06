@@ -1,0 +1,61 @@
+body {
+  //font-family: 'Aleo', serif;
+  //font-family: 'Magra', sans-serif;
+  font-family: 'Red Hat Text', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: black;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  //padding-left: calc(50% - 720px);
+  //padding-right: calc(50% - 720px);
+  background-color: white;
+}
+
+.container-wrp {
+  padding:0 120px;
+
+  @include tablet {
+    padding:0 32px;
+  }
+
+  @include mobile {
+    padding:0 15px;
+  }
+}
+
+.title {
+  @include font (40px, 53px, normal, 500);
+  color: $orange-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mobile {
+    @include font (14px, 19px, normal, 500);
+  }
+}
+
+.hidden {
+  display: none;
+}

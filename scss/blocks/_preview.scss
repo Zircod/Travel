@@ -1,0 +1,95 @@
+.preview {
+  background: url(../img/previewBkg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 765px;
+  color: $white-color;
+  margin-top: -90px;
+  box-sizing: border-box;
+  font-family: 'Aleo';
+
+  @include mobile {
+    min-height: 251px;
+  }
+
+  .preview__bkg {
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+    min-height: 90px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .preview__wrp {
+    max-width: 892px;
+    padding-top: 32px;
+
+    @include mobile {
+      background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+      padding-top: 142px;
+    }
+  }
+
+  .preview__planning {
+    display: flex;
+    align-items: center;
+  }
+
+  .preview__title {
+    @include font (80px, 96px, normal, 700);
+    color: $white-color;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .preview__text {
+    @include font (20px, 24px, italic, 700);
+    margin: 46px 0;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .preview__input {
+    max-width: 892px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    border: none;
+    box-sizing: border-box;
+    padding: 32px 260px 41px 41px;
+    @include font (24px, 29px, italic, 400);
+
+    @include mobile {
+      padding: 16px 115px 20px 16px;
+      @include font (14px, 17px, italic, 400);
+    }
+  }
+
+  .preview__input::placeholder {
+    color: $orange-color;
+  }
+
+  .preview__input:focus,
+  .preview__input:hover {
+    outline: solid 1px $orange-color;
+    cursor: pointer;
+  }
+
+  .preview__input-btn {
+    padding: 13px 33px;
+    margin-left: -245px;
+
+    @include mobile {
+      margin-left: -101px;
+      padding: 7px 9px;
+      @include font (11px, 15px, normal, 500);
+    }
+  }
+}
