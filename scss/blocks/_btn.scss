@@ -1,0 +1,53 @@
+.btn {
+  font-family: 'Red Hat Text';
+  @include font(24px, 32px, normal, 500);
+  color: $white-color;
+  background-color: $green-color;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s linear,
+              color 0.3s linear,
+              outline 0.3s linear;
+  box-sizing: border-box;
+
+  @include mobile {
+    @include font(11px, 15px, normal, 500);
+  }
+}
+
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  background-color: $white-color;
+  color: $green-color;
+  outline: 2px solid $green-color;
+}
+
+.btn:active {
+  outline: 4px solid $green-color;
+  opacity: 0.7;
+}
+
+.btn-svg {
+  vertical-align: middle;
+  padding-right: 13px;
+  fill: $white-color;
+  transition: fill 0.3s linear;
+
+  @include tablet {
+    padding-right: 6px;
+    width: 9px;
+    height: 6px;
+  }
+}
+
+.btn:hover .btn-svg,
+.btn:focus .btn-svg {
+  fill: $green-color;
+}
+
+.btn+.btn-svg:active {
+  opacity: 0.7;
+}

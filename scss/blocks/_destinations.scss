@@ -1,0 +1,158 @@
+.destinations {
+
+  @include mobile {
+    padding: 0 15px;
+  }
+
+  .destinations__title {
+    padding-bottom: 46px;
+
+    @include tablet {
+      padding-bottom: 20px;
+    }
+  }
+
+  .destination__slider {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .destination__slide {
+   position: relative;
+  }
+
+  .destination__slide-text {
+    font-family: 'Red Hat Text';
+    @include font (32px, 42px, normal, 500);
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+    color: $white-color;
+    text-transform: uppercase;
+
+    @include mobile {
+      @include font (20px, 26px, normal, 500);
+      top: 8px;
+    }
+  }
+
+  .destination__slide-img {
+    border-radius: 16px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .destination__slide-arrow-right,
+  .destination__slide-arrow-left {
+    fill: #F2785C;
+    position: absolute;
+    top: 47%;
+    transition: 0.3ms all;
+  }
+
+  .destination__slide-arrow-right {
+    right: 3%;
+    @include mobile  {
+      right: calc(47% - 155px);
+    }
+
+    @include mini-mobile  {
+      right: 3%;
+    }
+
+  }
+
+  .destination__slide-arrow-left {
+    left: 3%;
+    @include mobile {
+      left: calc(47% - 155px);
+    }
+
+    @include mini-mobile {
+      left: 3%;
+    }
+  }
+
+  .destination__slide-arrow-right:hover,
+  .destination__slide-arrow-right:focus,
+  .destination__slide-arrow-left:focus,
+  .destination__slide-arrow-left:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .destination__nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 24px 0 40px 0;
+
+    @include mobile {
+      margin: -20px 0  0 0;
+      position: relative;
+    }
+  }
+
+  .destination__label{
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .destination__label:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(242, 120, 92, 0.5);
+    box-sizing: border-box;
+    transition:background-color 0.4s linear;
+
+    @include mobile {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .destination__input {
+    display: none;
+  }
+  .destination__label-active {
+    background-color: $orange-color;
+    border-radius: 50%;
+  }
+
+  //.destination__input:checked+.destination__label:before {
+  //  background-color: $orange-color;
+  //}
+
+  .destination__input:hover +.destination__label:before,
+  .destination__input:focus +.destination__label:before {
+    cursor: pointer;
+  }
+
+  .destinations__btn-wrp {
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      padding-top: 17px;
+    }
+  }
+
+  .destinations__btn {
+    padding: 13px 32px;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      padding: 7px 12px;
+    }
+  }
+}
+
